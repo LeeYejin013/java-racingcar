@@ -18,9 +18,13 @@ public class Race {
         ArrayList<String> winners = new ArrayList<>();
         int n  = cars.size();
         int maxScore = 0;
-        for (Car car : cars){
+        for (Car car : cars){   //maxScore설정
             if (car.score.length() > maxScore){
                 maxScore = car.score.length();
+            }
+        }
+        for(Car car : cars){    //maxScore인 차량들 저장
+            if (car.score.length() == maxScore){
                 winners.add(car.name);
             }
         }
